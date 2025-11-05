@@ -1,5 +1,7 @@
 # Projeto: Software e ODS 9 (Indústria, Inovação e Infraestrutura)
 
+PARA ACESSAR O  SOFTWARE BASTA ACESSAR : https://projetotiverde.shop/
+
 Foco educacional em como o desenvolvimento de software e soluções digitais colaboram diretamente para o ODS 9: fortalecer a inovação, construir infraestrutura resiliente e promover industrialização inclusiva e sustentável.
 
 ## Sobre o Projeto
