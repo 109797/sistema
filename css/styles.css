@@ -1,0 +1,1020 @@
+/* Cores do Tema */
+:root {
+    --primary-color: #2e8b57; /* Verde médio */
+    --secondary-color: #66cdaa; /* Verde claro */
+    --dark-green: #1a5c38; /* Verde escuro para contraste */
+    --light-color: #f5f5f5; /* Quase branco */
+    --text-color: #333; /* Texto escuro */
+    --accent-color: #e0f7e0; /* Verde muito claro para destaques */
+    --ods12-color: #bf8b2e; /* Cor do ODS 12 */
+    --energy-color: #4caf50; /* Verde para eficiência energética */
+    --recycling-color: #8bc34a; /* Verde-limão para reciclagem */
+    --cloud-color: #03a9f4; /* Azul para cloud computing */
+    --datacenter-color: #009688; /* Verde-azulado para data centers */
+}
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dark-green);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Transformação do hamburger em X quando ativo */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+/* Botões de navegação (Ver/Enviar Sugestões) */
+.nav-button {
+    background: #ffffff;
+    color: var(--primary-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.nav-button:hover, .nav-button.active {
+    background: #f7f7f7;
+    color: var(--primary-color);
+}
+.nav-button::after { display: none; }
+
+/* Links de sugestões na tabela/lista */
+.suggestion-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.suggestion-link:hover { text-decoration: underline; }
+
+/* Botões adicionais */
+.btn-danger {
+    background: #e53e3e;
+    color: #fff;
+}
+.btn-danger:hover { background: #c53030; color: #fff; }
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+/* Utilitário de texto verde */
+.text-primary { color: var(--energy-color); }
+
+/* Ações no banner (hero) */
+.hero-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.hero .hero-actions,
+.suggestions-hero .hero-actions {
+    justify-content: center;
+}
+
+/* Botões genéricos */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover { background: var(--dark-green); }
+
+.btn-secondary {
+    background: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover { background: var(--accent-color); }
+
+@media (max-width: 600px) {
+    .hero-actions { flex-direction: column; }
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropbtn:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dark-green);
+    color: white;
+}
+
+/* Em desktop, mostra dropdown no hover */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+        color: var(--accent-color);
+    }
+}
+
+/* Classe para controlar exibição no modo mobile */
+.dropdown-active .dropdown-content {
+    display: block;
+}
+
+.dropdown-active .dropbtn {
+    color: var(--accent-color);
+}
+
+/* Dropdown Menu */
+.dropbtn-mobile {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropbtn-mobile:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dark-green);
+    color: white;
+}
+
+/* Em desktop, mostra dropdown no hover */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn-mobile {
+        color: var(--accent-color);
+    }
+}
+
+/* Classe para controlar exibição no modo mobile */
+.dropdown-active .dropdown-content {
+    display: block;
+}
+
+.dropdown-active .dropbtn-mobile {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Variações do Hero */
+.ods-hero {
+    background: linear-gradient(to right, var(--ods12-color), #d4af37);
+}
+
+.data-hero {
+    background: linear-gradient(to right, #4682b4, #87ceeb);
+}
+
+.energy-hero {
+    background: linear-gradient(to right, var(--energy-color), #81c784);
+}
+
+.recycling-hero {
+    background: linear-gradient(to right, var(--recycling-color), #aed581);
+}
+
+.cloud-hero {
+    background: linear-gradient(to right, var(--cloud-color), #4fc3f7);
+}
+
+.datacenter-hero {
+    background: linear-gradient(to right, var(--datacenter-color), #4db6ac);
+}
+
+/* Content Section */
+.content-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.content-item {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Practices Section */
+.practices-section {
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+}
+
+.practices-list {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.practices-list li {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.practices-list strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* ODS Section */
+.ods {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.ods-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ods-image {
+    flex: 1;
+    text-align: center;
+}
+
+.ods-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder para ODS 12 */
+.ods-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: var(--ods12-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.ods-number {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ods-title {
+    font-size: 24px;
+    max-width: 80%;
+    line-height: 1.3;
+}
+
+.ods-text {
+    flex: 2;
+}
+
+.ods-text ul, .ods-list {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.ods-text li, .ods-list li {
+    margin-bottom: 1rem;
+}
+
+.ods-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.ods-list h3 {
+    color: var(--ods12-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ODS Goals Section */
+.ods-goals {
+    padding: 4rem 0;
+    background-color: #f9f5e9;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.goal-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--ods12-color);
+}
+
+.goal-item h3 {
+    color: var(--ods12-color);
+    margin-bottom: 1rem;
+}
+
+/* Charts Section */
+.charts {
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+}
+
+.charts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.chart-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.chart-box h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.company-details {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-details h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.company-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.company-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.economy-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Data Analysis Section */
+.data-analysis {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.analysis-item {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-item h3 {
+    color: #4682b4;
+    margin-bottom: 1rem;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.case-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.case-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.case-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 300px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.energy-icon {
+    font-size: 5rem;
+}
+
+.case-results {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    list-style-type: none;
+}
+
+.case-results li {
+    margin-bottom: 0.8rem;
+}
+
+/* Practical Tips Section */
+.practical-tips, .tips-section {
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tip-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+}
+
+.tip-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.tip-content {
+    flex-grow: 1;
+}
+
+/* Process Section */
+.process-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.process-flow {
+    margin-top: 2rem;
+}
+
+.process-step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.process-step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    background-color: var(--recycling-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 4rem 0;
+    background-color: var(--accent-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.certification-item {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--recycling-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ods-content {
+        flex-direction: column;
+    }
+    
+    .charts-container {
+        flex-direction: column;
+    }
+    
+    header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .ods-placeholder {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .ods-number {
+        font-size: 56px;
+    }
+    
+    .ods-title {
+        font-size: 18px;
+    }
+    
+    .content-grid, 
+    .goals-grid, 
+    .analysis-grid,
+    .stats-container,
+    .benefits-grid,
+    .certifications-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-content {
+        flex-direction: column;
+    }
+    
+    /* Mostrar hamburger */
+    .hamburger {
+        display: block;
+    }
+    
+    /* Esconder navegação por padrão */
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        z-index: 100;
+    }
+    
+    /* Mostrar navegação quando classe 'menu-open' é adicionada */
+    nav.menu-open {
+        max-height: 1000px;
+        overflow-y: auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    /* SOLUÇÃO RADICAL: Sempre mostrar o dropdown em modo mobile */
+    .dropdown-content {
+        display: block !important;
+        position: static;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        background-color: var(--dark-green);
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Estilizar o cabeçalho do dropdown como um título, não como botão */
+    .dropbtn-mobile {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Melhorar a aparência de cada item do submenu */
+    .dropdown-content a {
+        padding: 8px 0;
+        background-color: rgba(0,0,0,0.2);
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Destaque para o item ativo */
+    .dropdown-content a.active {
+        background-color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    /* Remover indicador do dropdown já que está sempre visível */
+    .dropbtn-mobile:after {
+        display: none;
+    }
+}

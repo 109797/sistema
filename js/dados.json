@@ -1,0 +1,43 @@
+[
+  {
+    "nome": "Nexxio",
+    "pratica": "Virtualização de servidores",
+    "economiaEnergia": 25,
+    "descricao": "A Nexxio implementou uma estratégia de virtualização que reduziu o número de servidores físicos em 70%, diminuindo significativamente o consumo de energia e a necessidade de refrigeração do data center.",
+    "anoImplementacao": 2019,
+    "retornoInvestimento": "18 meses",
+    "beneficiosAdicionais": [
+      "Redução de espaço físico",
+      "Menor necessidade de manutenção",
+      "Maior flexibilidade para escalar recursos"
+    ]
+  },
+  {
+    "nome": "CABTI",
+    "pratica": "Otimização de desempenho e eficiência energética",
+    "economiaEnergia": 30,
+    "descricao": "A CABTI, com mais de 15 anos de experiência em TI, especializa-se em otimização de sistemas para resolver problemas de lentidão, implementando soluções que não apenas melhoram o desempenho mas também reduzem o consumo energético de computadores e notebooks.",
+    "anoImplementacao": 2020,
+    "retornoInvestimento": "24 meses",
+    "beneficiosAdicionais": [
+      "Aumento da vida útil dos equipamentos",
+      "Redução do consumo energético",
+      "Melhoria significativa na performance dos sistemas",
+      "Suporte especializado em desenvolvimento web sustentável"
+    ]
+  },
+  {
+    "nome": "Powertech",
+    "pratica": "Gestão eficiente de infraestrutura e reaproveitamento",
+    "economiaEnergia": 35,
+    "descricao": "A Powertech, especializada em consultoria de TI, administração de servidores e assistência técnica, implementou práticas sustentáveis através da otimização de infraestrutura, reparo e reaproveitamento de equipamentos, reduzindo a necessidade de novos recursos.",
+    "anoImplementacao": 2021,
+    "retornoInvestimento": "18 meses",
+    "beneficiosAdicionais": [
+      "Extensão da vida útil dos equipamentos através de reparos",
+      "Otimização de redes estruturadas para maior eficiência",
+      "Redução de desperdício através de reaproveitamento",
+      "Consultoria especializada em soluções sustentáveis"
+    ]
+  }
+] 

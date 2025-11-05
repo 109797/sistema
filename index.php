@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI Verde - Tecnologia Sustentável</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TI Verde</h1>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.php" class="active">Início</a></li>
+                    <li><a href="ods12.html">ODS 12</a></li>
+                    <li><a href="dados.html">Dados</a></li>
+                    <li><a href="listar.php" class="nav-button">Ver Sugestões</a></li>
+                    <li><a href="#sugestao" class="nav-button">Enviar Sugestão</a></li>
+                    <li class="dropdown">
+                        <div class="dropbtn-mobile">Práticas Sustentáveis</div>
+                        <div class="dropdown-content">
+                            <a href="eficiencia-energetica.html">Eficiência Energética</a>
+                            <a href="reciclagem-e-lixo.html">Reciclagem de E-lixo</a>
+                            <a href="cloud-sustentavel.html">Cloud Computing</a>
+                            <a href="datacenters-verdes.html">Data Centers Verdes</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Software e ODS 9: Indústria, Inovação e Infraestrutura</h2>
+                <p>Como os softwares podem ajudar a alcançar o ODS 9: criando infraestrutura digital resiliente, automatizando processos, elevando eficiência operacional e impulsionando inovação aberta para serviços mais acessíveis e confiáveis.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="listar.php">Ver Sugestões</a>
+                    <a class="btn btn-secondary" href="#sugestao">Enviar Sugestão</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>O que é TI Verde?</h2>
+                <p>A TI Verde (ou Green IT) é uma abordagem que busca reduzir o impacto ambiental das tecnologias da informação, desde o desenvolvimento e uso de equipamentos até o descarte adequado. Envolve práticas sustentáveis em toda a cadeia tecnológica para diminuir o consumo de recursos naturais e a emissão de gases de efeito estufa.</p>
+                
+                <p>O conceito se tornou cada vez mais relevante com o crescimento exponencial do uso de tecnologia e a consequente preocupação com os impactos ambientais associados, como o alto consumo de energia, uso de materiais tóxicos e geração de resíduos eletrônicos.</p>
+            </div>
+        </section>
+
+        <section class="practices-section">
+            <div class="container">
+                <h2>Principais Práticas de TI Verde</h2>
+                <p>Conheça algumas das práticas mais importantes para tornar a tecnologia mais sustentável:</p>
+                
+                <ul class="practices-list">
+                    <li>
+                        <strong>Eficiência Energética</strong>: Utilização de equipamentos e processos que consomem menos energia, como servidores mais eficientes e técnicas de gerenciamento de energia. <a href="eficiencia-energetica.html">Saiba mais &rarr;</a>
+                    </li>
+                    <li>
+                        <strong>Reciclagem de E-lixo</strong>: Descarte adequado de equipamentos eletrônicos antigos ou danificados, facilitando a recuperação de materiais valiosos e reduzindo a contaminação ambiental. <a href="reciclagem-e-lixo.html">Saiba mais &rarr;</a>
+                    </li>
+                    <li>
+                        <strong>Virtualização</strong>: Consolidação de servidores físicos em ambientes virtuais, reduzindo o número de equipamentos necessários e, consequentemente, o consumo de energia e recursos.
+                    </li>
+                    <li>
+                        <strong>Cloud Computing Sustentável</strong>: Utilização de serviços em nuvem com infraestrutura otimizada para eficiência energética e fontes renováveis de energia. <a href="cloud-sustentavel.html">Saiba mais &rarr;</a>
+                    </li>
+                    <li>
+                        <strong>Data Centers Verdes</strong>: Projeto e operação de centros de dados com foco em eficiência energética, uso de energia renovável e sistemas de refrigeração otimizados. <a href="datacenters-verdes.html">Saiba mais &rarr;</a>
+                    </li>
+                    <li>
+                        <strong>Paperless Office</strong>: Redução do uso de papel através da digitalização de documentos e implementação de fluxos de trabalho digitais.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Benefícios da TI Verde</h2>
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Ambientais</h3>
+                        <ul>
+                            <li>Redução da emissão de gases de efeito estufa</li>
+                            <li>Diminuição do consumo de recursos naturais</li>
+                            <li>Menor geração de resíduos tóxicos</li>
+                            <li>Preservação de recursos naturais</li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <h3>Econômicos</h3>
+                        <ul>
+                            <li>Redução de custos operacionais</li>
+                            <li>Economia em consumo de energia</li>
+                            <li>Maior vida útil dos equipamentos</li>
+                            <li>Retorno sobre investimentos em eficiência</li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <h3>Sociais</h3>
+                        <ul>
+                            <li>Melhoria da imagem corporativa</li>
+                            <li>Conscientização sobre sustentabilidade</li>
+                            <li>Cumprimento de legislações ambientais</li>
+                            <li>Contribuição para um futuro sustentável</li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <h3>Operacionais</h3>
+                        <ul>
+                            <li>Melhor desempenho dos equipamentos</li>
+                            <li>Otimização de processos</li>
+                            <li>Maior disponibilidade de recursos</li>
+                            <li>Espaço físico reduzido para infraestrutura</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ods">
+            <div class="container">
+                <h2>Relação com o ODS 12</h2>
+                <p>A TI Verde está diretamente relacionada ao Objetivo de Desenvolvimento Sustentável 12 da ONU: "Consumo e Produção Responsáveis".</p>
+                
+                <div class="ods-content">
+                    <div class="ods-image">
+                        <div class="ods-placeholder">
+                            <div class="ods-number">12</div>
+                            <div class="ods-title">Consumo e Produção Responsáveis</div>
+                        </div>
+                    </div>
+                    <div class="ods-text">
+                        <p>As práticas de TI Verde contribuem para várias metas do ODS 12, principalmente:</p>
+                        
+                        <ul>
+                            <li>Gestão sustentável e uso eficiente dos recursos naturais</li>
+                            <li>Redução da geração de resíduos por meio de prevenção, redução, reciclagem e reuso</li>
+                            <li>Adoção de práticas sustentáveis por empresas</li>
+                            <li>Promoção de políticas de compras públicas sustentáveis</li>
+                        </ul>
+                        
+                        <p><a href="ods12.html">Saiba mais sobre o ODS 12 e sua relação com a TI Verde &rarr;</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Explore Nosso Conteúdo</h2>
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Eficiência Energética</h3>
+                        <p>Descubra estratégias para reduzir o consumo de energia em equipamentos e infraestruturas de TI, mantendo ou melhorando o desempenho.</p>
+                        <p><a href="eficiencia-energetica.html">Ver detalhes &rarr;</a></p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Reciclagem de E-lixo</h3>
+                        <p>Aprenda sobre o processo de reciclagem de equipamentos eletrônicos e como isso contribui para a redução do impacto ambiental da tecnologia.</p>
+                        <p><a href="reciclagem-e-lixo.html">Ver detalhes &rarr;</a></p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Cloud Computing Sustentável</h3>
+                        <p>Entenda como a computação em nuvem pode ser mais sustentável através da otimização de recursos e uso de energias renováveis.</p>
+                        <p><a href="cloud-sustentavel.html">Ver detalhes &rarr;</a></p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Data Centers Verdes</h3>
+                        <p>Conheça as características e benefícios dos data centers projetados com foco na eficiência energética e sustentabilidade.</p>
+                        <p><a href="datacenters-verdes.html">Ver detalhes &rarr;</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Seção de formulário de sugestões -->
+    <section class="content-section" id="sugestao">
+        <div class="container">
+            <h2>Envie sua dica de TI Verde</h2>
+            <form action="salvar.php" method="post" class="form-sugestao" style="max-width:600px;margin:24px auto;padding:16px;border:1px solid var(--primary-color);border-radius:8px">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required
+                    placeholder="Ex.: Economia de energia nos servidores"
+                    style="width:100%;padding:10px;margin:6px 0 12px;border:1px solid var(--primary-color);border-radius:4px">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required
+                    placeholder="Descreva sua sugestão..."
+                    style="width:100%;padding:10px;margin:6px 0 12px;border:1px solid var(--primary-color);border-radius:4px"></textarea>
+
+                <button type="submit" style="padding:10px 16px;border:none;border-radius:4px;background:#2c7a7b;color:#fff;cursor:pointer">
+                    Enviar sugestão
+                </button>
+
+                <p style="margin-top:12px">
+                    <a href="listar.php">Ver sugestões já cadastradas</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Site desenvolvido como projeto educacional sobre TI Verde</p>
+            <p>
+                <a href="https://github.com/seu-usuario/projeto-ti-verde" target="_blank">
+                    <object data="img/github.svg" type="image/svg+xml" class="github-icon"></object>
+                    Repositório no GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+</body>
+</html>
